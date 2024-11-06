@@ -4,6 +4,7 @@ class MyProduct{
   late String nom;
   late String desc;
   late List photos;
+  late int prix;
 
 
   MyProduct(DocumentSnapshot snapshot){
@@ -12,6 +13,8 @@ class MyProduct{
     nom = datas["NOM"];
     desc = datas["DESC"];
     photos = datas["PHOTOS"];
+    double prixProvisoire = datas["PRIX"];
+    prix = prixProvisoire.toInt();
 
   }
 

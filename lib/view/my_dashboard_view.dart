@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:amazonmini/controller/my_firestore_helper.dart';
 import 'package:amazonmini/model/my_produit.dart';
 import 'package:amazonmini/view/my_background.dart';
+import 'package:amazonmini/view/detail_produit_page.dart';
 
 
 class MyDashBoard extends StatefulWidget {
@@ -63,7 +64,14 @@ class _MyDashBoardState extends State<MyDashBoard> {
                   itemCount: documents.length,
                   itemBuilder: (context,index){
                     MyProduct produit = MyProduct(documents[index]);
-                    return Image.network(produit.photos[0]);
+                    return GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MyDetailProduct(product:produit)));
+                      },
+                      child: Image.network(produit.photos[0]),
+                    );
+
+
 
                   }
               );
