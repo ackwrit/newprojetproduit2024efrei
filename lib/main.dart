@@ -4,11 +4,14 @@ import 'firebase_options.dart';
 import 'package:amazonmini/view/my_background.dart';
 import 'package:amazonmini/view/my_login_page.dart';
 import 'package:amazonmini/view/my_register_page.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Stripe.publishableKey ="pk_test_51GQ8hTDVXOXIy9UxpbYscBnuiq9FTW63gCk5agdRp2JOjym1NvC03WVaEBdj6wwFkJzAeCit9ZA77sBTeQHaI9rI00fsdMSCog";
+
   runApp(const MyApp());
 }
 

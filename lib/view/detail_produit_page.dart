@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:amazonmini/model/my_produit.dart';
 import 'package:amazonmini/view/my_background.dart';
+import 'package:amazonmini/controller/paymentController.dart';
 
 class MyDetailProduct extends StatefulWidget {
   MyProduct product;
@@ -45,6 +46,8 @@ class _MyDetailProductState extends State<MyDetailProduct> {
                   ElevatedButton(
                       onPressed: (){
                         //mettre dans le panier
+                        PaymentHelper().makePayement(context: context, amount: (widget.product.prix * 100).toString(), currency: "EUR");
+
                       },
                       child: Text("Mettre dans le panier")
                   ),
