@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:amazonmini/controller/my_firestore_helper.dart';
 import 'package:amazonmini/model/my_produit.dart';
+import 'package:amazonmini/view/my_background.dart';
 
 
 class MyDashBoard extends StatefulWidget {
@@ -24,7 +25,7 @@ class _MyDashBoardState extends State<MyDashBoard> {
 
 
       ),
-      extendBodyBehindAppBar: ,
+      extendBodyBehindAppBar: true,
 
       body: Stack(
         children: [
