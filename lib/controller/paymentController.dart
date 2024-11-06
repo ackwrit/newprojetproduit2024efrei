@@ -25,7 +25,8 @@ class PaymentHelper extends GetxController{
           'Authorization': "Bearer sk_test_51GQ8hTDVXOXIy9Uxm4xNL9B8TNe81JqkYxwM7is0MerO0x6UOaJJtqyCI9TBTG2CaTj5hIEx7TJpgc19OIj0YXPY00jMNVWtm8",
           'Content-Type':'application/x-www-form-urlencoded'
         };
-        var response = await http.post(Uri(scheme:'https//api.stripe.com/v2/payements_intents'),headers:header,body:body);
+        var response = await http.post(Uri(path:'api.stripe.com/v2/payements_intents'),headers:header,body:body);
+        print(response.body);
         jsonDecode(response.body);
 
 
