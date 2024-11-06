@@ -56,11 +56,14 @@ class _MyDashBoardState extends State<MyDashBoard> {
             }else {
               List documents = snap.data!.docs;
               return GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 5,
+                  ),
                   itemCount: documents.length,
                   itemBuilder: (context,index){
                     MyProduct produit = MyProduct(documents[index]);
-                    return Text(produit.desc);
+                    return Image.network(produit.photos[0]);
 
                   }
               );
