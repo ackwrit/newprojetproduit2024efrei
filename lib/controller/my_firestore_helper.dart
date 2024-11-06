@@ -20,6 +20,7 @@ class MyFirestoreHelper{
       "EMAIL":email
     };
     addUser(uid: uid, data: data);
+    return getUser(uid);
 
 
 
@@ -39,7 +40,7 @@ class MyFirestoreHelper{
 
   //recuperer un UTILISATEURS
   Future <MyUser>getUser(uid) async{
-    DocumentSnapshot snapshot = await cloudUtilisateur.doc(uid).get();
+    DocumentSnapshot snapshot = await cloudUtilisateurs.doc(uid).get();
     return MyUser(snapshot);
 
   }

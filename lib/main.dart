@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed:(){
               setState((){
                 counter = 1;
-              })
+              });
             }
           ),
           TextButton(
