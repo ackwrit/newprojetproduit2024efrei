@@ -60,7 +60,7 @@ class _MyDashBoardState extends State<MyDashBoard> {
                   itemCount: documents.length,
                   itemBuilder: (context,index){
                     MyProduct produit = MyProduct(documents[index]);
-                    return Text(produit.uid);
+                    return Text(produit.desc);
 
                   }
               );

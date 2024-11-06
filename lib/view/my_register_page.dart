@@ -116,7 +116,7 @@ class _MyRegisterView extends State<MyRegisterView> {
             onPressed: (){
               print("Je suis connecté");
 
-              MyFirestoreHelper().connexion(mail.text, password.text).then((onValue){
+              MyFirestoreHelper().registerUser(password: password.text,email: mail.text,lastName :nom.text,name: prenom.text).then((onValue){
                 setState((){
                   me = onValue;
                 });

@@ -104,9 +104,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Stack(
           children: [
             MyBackground(),
-            Center(
-              child: choice(),
+            Column(
+              children: [
+                Spacer(),
+                Center(
+                  child: choice(),
+                ),
+                Spacer()
+              ],
             ),
+
 
           ],
         ) ,
