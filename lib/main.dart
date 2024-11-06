@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation:0,
         actions:[
           TextButton(
-            child : Text("Inscripption"),
+            child : Text("Inscripption",style: TextStyle(color: Colors.black),),
             onPressed:(){
               setState((){
                 counter = 1;
@@ -84,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }
           ),
           TextButton(
-              child : Text("Connexion"),
+              child : Text("Connexion",style: TextStyle(color: Colors.black),),
               onPressed:(){
                 setState((){
                   counter = 0;
@@ -103,7 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Stack(
           children: [
             MyBackground(),
-            choice(),
+            Center(
+              child: choice(),
+            ),
+
           ],
         ) ,
       ),

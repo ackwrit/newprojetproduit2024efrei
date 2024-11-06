@@ -1,2 +1,2 @@
 import 'package:amazonmini/model/my_user.dart';
-My User me = MyUser.empty();
+MyUser me = MyUser.empty();

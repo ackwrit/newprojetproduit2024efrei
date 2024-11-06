@@ -15,7 +15,7 @@ class MyUser{
     prenom = "";
     nom = "";
     avatar = "";
-    produits = []
+    produits = [];
   }
 
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:amazonmini/view/my_dashboard_view.dart';
+import 'package:amazonmini/controller/my_firestore_helper.dart';
+import 'package:amazonmini/controller/constante.dart';
 
 class MyLoginView extends StatefulWidget {
   const MyLoginView({super.key});
@@ -91,7 +93,7 @@ class _MyLoginView extends State<MyLoginView> {
             onPressed: (){
               print("Je suis connecté");
 
-              MyFirebaseHelper().connexion(mail.text, password.text).then((onValue){
+              MyFirestoreHelper().connexion(mail.text, password.text).then((onValue){
                 setState((){
                   me = onValue;
                 });

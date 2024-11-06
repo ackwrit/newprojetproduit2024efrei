@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:amazonmini/controller/constante.dart';
+import 'package:amazonmini/view/my_dashboard_view.dart';
+import 'package:amazonmini/controller/my_firestore_helper.dart';
 
 
 class MyRegisterView extends StatefulWidget {
@@ -113,7 +116,7 @@ class _MyRegisterView extends State<MyRegisterView> {
             onPressed: (){
               print("Je suis connecté");
 
-              MyFirebaseHelper().connexion(mail.text, password.text).then((onValue){
+              MyFirestoreHelper().connexion(mail.text, password.text).then((onValue){
                 setState((){
                   me = onValue;
                 });
